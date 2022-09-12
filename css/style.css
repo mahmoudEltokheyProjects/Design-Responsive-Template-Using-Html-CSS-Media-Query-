@@ -1,0 +1,1150 @@
+/* bootstrap او ال font-awesome ذي ال styleهحط اي حاجة مستدعيها من الخارج خاصة بال */
+/*  after , before عشان ميكنش فيه فارغات في العرض وطول الصفحة لكل العناصر ولو فيه عناصر */
+* , *:before , *:after
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family:Tahoma , Arial  ;
+} 
+/* --------------------- container : contain all elements of our website *************************** */ 
+/* عشان يكون من نصف الصفحة margin:auto وهيعمل container لان اللوجو مش بيبدا من بداية الصفحة فهحطه في */
+.container
+{
+/*container width will be 85% from the width of all screen types [ large , medium , small ]if width by pixels,it will be    static 
+*/
+    width:85%;
+    margin: auto;
+    /* border: 2px solid #080; */
+    overflow: hidden;
+}
+/* <!-- ************************************** start :  navbar of website **************************************** --> */
+/*----------------- navbar ------------------------- */
+.navbar
+{
+    /* border:2px solid #f00; */
+    background-color:#fff; 
+   /* 
+       overflow:hidden مش بتخلي العنصر يحس بالمحتوي اللي موجود بداخله لذلك هعمل float عشان اخليه يحس بالمحتوي اللي موجود بداخله لان خاصية ال 
+           يكون حسب العناصر الموجودة بداخله navbar height عشان اخلي ال  
+    */
+    overflow:hidden;
+    padding:20px 0;
+    /*  navbar بحرية بالنسبة لل navbar menu buttonعشان احرك ال */
+    position: relative;
+}
+/*----------------- navbar logo --------------------- */
+.navbar .logo
+{
+    float: left;
+    width:50%;
+}
+/*----------------- navbar logo header he ------------------------- */
+.navbar .logo  .logo-text
+{  
+    font-weight: bold;
+    font-size:30px;
+    text-transform: capitalize;
+   /* border:2px solid #0f0 ;  */
+}
+/* -------------------- navbar menu button -----------------------  */
+.navbar input , .navbar label
+{
+    position: absolute;
+    top:10px;
+    right:25px;
+}
+    
+.navbar input 
+{
+    /* image ب label وبعد كده هستبدل الcheckboxكاني ضغطت علي ال labelفقط لان انا اتاكدت ات لو ضغطت علي ال labelهخفيه لان انا محتاج ال */
+    display: none ;
+}
+.navbar label
+{
+    display: block;
+    width:15px;
+    height:15px;
+    background-image:url('../images/navbar_icon/open.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:20px;
+    cursor: pointer;
+}
+/* واظهرها  <ul> links list هات ال label(or checkbx) يعني اضغط علي ال  check لما اعمل */
+/* '~' this means : return all brothers of input checkbox where <label> and <div class="links"> */
+/*   واظهر هذا العنصر .links رجع لي كل اخواته من العناصر واختار منهم العنصر اللي واخد الكلاس اللي اسمه input checkbox علي ال check بقول له لما اعمل */
+/* check هيظهر لي القائمة ولو ضغط عليها مرة اخري هيخفيها لان انا كده مش عامل checkbox علي ال checked طول ما انا عامل */
+.navbar input:checked ~  .links  
+{
+    display: block;
+}
+/*   exit وغير الخلفية بتعته وخليها علامة ال labelو رجع لي كل اخواته من العناصر واختار منهم العنصر الinput checkbox علي ال check بقول له لما اعمل */
+.navbar input:checked ~  label  
+{
+   
+    background-image:url('../images/navbar_icon/close.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*----------------- navbar links ------------------------- */
+.navbar .links 
+{
+    float: right;
+    width:50%;
+    /* border:2px solid #00f; */
+}
+/*----------------- navbar links <ul> ------------------------- */
+.navbar .links .ul-list
+{
+    list-style: none;
+}
+/*----------------- navbar links <li> ------------------------- */
+.navbar .links .ul-list .list-item
+{
+    display: inline-block;
+}
+.navbar .links .ul-list li a
+{
+    /*  عرض وطول وخوائص اخري link عشان استطيع اعطاء كل */
+    display: block;
+    color:#000;
+    text-decoration:none;
+    text-transform: capitalize;
+    /* padding:top right bottom left  */
+    padding:10px 10px;
+    font-weight:bold;
+}
+.navbar .links .ul-list li .active
+{
+    color:#eb5424;
+}
+/* <!-- ************************************** end :  navbar of website **************************************** --> */
+
+/* <!-- ************************* start: [ home section ]JOHN WHITE and creative director ********************** --> */
+.homeClass
+{
+    width:100%;
+    height:500px;
+    background-image:url('../images/home/home-bg.jpg');
+    background-size:cover;
+    /* عشان اخلي يظهر مركز الصورة في الطول والعرض */
+    background-position: center ;
+    /* border:3px solid #000; */
+    /* to put anything in center of home section */
+    text-align: center;
+    /* homeClass بحرية بالنسبة لل home-information عشان احرك ال */
+    position: relative;
+}
+/* container of home [ JOHN WHITE and creative director ] section */
+.homeClass .homeContainer
+{
+    width:85%;
+    height:auto;
+    margin: auto;
+   /* border: 2px solid #00f; */
+    overflow: hidden;
+}
+/* sub-container [home-information] */
+.homeClass .homeContainer .home-information
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* Css3 properity [ to put the .home-information in the center  ] */
+    /* width , height هحركه نصف المسافة ناحية الشمال وللاسفل في عكس الاتجاه يعني نصف المسافة من ال */
+    transform: translate( -50% , -50% );
+    -webkit-transform: translate( -50% , -50% );
+    -moz-transform: translate( -50% , -50% );
+}
+/* h2 of home [ JOHN WHITE and creative director ] section */
+.homeClass  .homeContainer .home-information .home-title 
+{  
+    font-size: 60px;
+    font-weight: bold;
+    color:#5e5e5e;
+    text-transform:uppercase;
+    margin-bottom: 20px;
+}
+/* h4 of home [ JOHN WHITE and creative director ] section */
+.homeClass  .homeContainer .home-information .home-info
+{
+    font-size: 35px;
+    color: #eb5424;
+    margin-bottom:20px;
+    text-transform: capitalize;
+}
+/* paragraph of home [ JOHN WHITE and creative director ] section */
+.homeClass .homeContainer .home-information .home-desc
+{
+    font-size: 15px;
+    /* مسافة بين كل سطر والاخر */
+    line-height:1.5;
+    text-transform: capitalize;
+    color:#888;
+    /* distance between <p> and <button> */
+    margin-bottom:20px;
+}
+/* span of paragraph of home section */
+.homeClass .homeContainer .home-information .home-desc span
+{
+    color:#000;
+    text-transform: uppercase; 
+}
+/* button of home section */
+.homeClass .homeContainer .home-information .home-btn
+{
+    background-color:#eb5424;
+    color:#fff;
+    font-size:18px;
+    width:150px;
+    /* remove border */
+    border:0;
+    /* remove outline of border */
+    outline:0;
+    padding: 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+/* hover on button of home section */
+.homeClass .homeContainer .home-information .home-btn:hover
+{
+    background-color: #fff;
+    color:#eb5424;
+}
+
+/* <!-- ********************* end :[ home section ] JOHN WHITE and creative director ********************** --> */
+/* <!-- ********************************** start: [ work section ] **************************************** --> */
+/* big parent of work section */
+.myWorkParent
+{
+    /* border:3px solid #ff0; */
+    width:100%;
+    /* عشان ارتفاع هذا السكشن يكون هو مجموع ارتفاع العناصر الموجودة بداخله */
+     /* عشان الاب ياخذ ارتفاع العناصر اللي موجودة بداخله */
+    height:auto;
+    /* عشان الاب يحس بالعناصر اللي بداخله وياخذ ارتفاعهم */
+    overflow: hidden;
+    /* padding-top , bottom = 50 , padding-left,right = 0 */
+    padding:50px 0 ;
+    background-color: #fff;
+} 
+/* container of myWork section */
+.myWorkParent .containerMyWork
+{
+    width:85%;
+    margin: auto;
+    /* border: 2px solid #f0f ; */
+}
+/* myWork header */
+.myWorkParent .containerMyWork .myWorkTitle
+{
+    font-size:60px;
+    text-transform:uppercase;
+}
+.myWorkParent .containerMyWork .myWorkTitle span
+{
+    /* bold  الطبيعي مش ال font-weight يجيب ال */
+    font-weight:normal;
+    color:#bbb;
+}
+
+/* common properities of 4 div  [ MOBILE UX , WEB DESIGN , HTML TEMPLATES ] */
+.myWorkParent .myWork1 , 
+.myWorkParent .myWork2 , 
+.myWorkParent .myWork3 
+{
+    float: left;
+    width:30%;
+    /* take the height of its content */
+    height:auto;
+    border:2px solid #888;
+    /* بتاع العنصر width من ضمن ال padding or border عشان ميحسبش ال */
+    box-sizing: border-box;
+    padding:100px 0px;
+    margin-top:20px;
+    /* each div of 3 div will take 30% of width of then width of 3Div + marginLeft=(30+5)%+(30+5)%+(30+5)% =105% */
+    /* But to make 105% is 100% we will remove the margin left of div1 */
+    margin-left:5%;
+    text-align: center;
+}
+.myWorkParent .myWork1 
+{
+    margin-left:0;
+}
+/* first div  icon properities */
+.myWorkParent .myWork1  .icon1Class , 
+.myWorkParent .myWork2  .icon2Class , 
+.myWorkParent .myWork3  .icon3Class 
+{
+    color:#888;
+    margin-bottom:20px;
+}
+/* common properities of myWork 4 div headers  */
+.myWorkParent .myWork1  .myWork1Head ,
+.myWorkParent .myWork2  .myWork2Head ,
+.myWorkParent .myWork3  .myWork3Head
+{
+    font-size:25px;
+    color:#eb5424;
+    margin-bottom:20px;
+    text-transform: uppercase;
+}
+/* common properities of  the line under the  4 div headers of work section  */
+.myWorkParent .myWork1 .line ,
+.myWorkParent .myWork2 .line ,
+.myWorkParent .myWork3 .line 
+{
+    /*   هيكون عرض الخط ستين في المائة من حجم الديف اللي هوه موجود فيه  */
+    width:60%;
+    /* put the line in the center of the div */
+    margin: auto;
+    /* make space under the line */
+    margin-bottom:20px;
+}
+/* common properities of  the paragraph of 4 div of work section  */
+.myWorkParent .myWork1 .myWorkPara1 ,
+.myWorkParent .myWork2 .myWorkPara2 ,
+.myWorkParent .myWork3 .myWorkPara3
+{
+    font-size:15px;
+    color:#888;
+    padding:20px;
+}
+
+/* <!-- ********************************** end: [ work section ] ********************************** --> */
+.clearFloat
+{
+    clear:both;
+}
+/* <!-- ********************************** start: [ portfolio section ] ********************************** --> */
+/* ------------ big parent of portfolio section ------------ */
+.portfolio
+{
+    /* border:3px solid #0f0; */
+    background-color:#f8f8f8;
+    /* عشان الاب ياخذ ارتفاع العناصر اللي موجودة بداخله */
+    height:auto;
+    /* عشان الاب يحس بالعناصر اللي بداخله وياخذ ارتفاعهم */
+    overflow: hidden;
+}
+/* ------------ title of portfolio section ------------ */
+.portfolio .portfolio-title
+{
+    text-align: center;
+    /* border:2px solid #f00; */
+    padding-top:30px;
+    text-transform: uppercase ;
+    font-size:40px;
+}
+/* ------------ span title of portfolio section ------------ */
+.portfolio .portfolio-title  span
+{
+    color:#ccc;
+    /*  bold عشان ميكنش */
+    font-weight: normal;
+}
+/* ------------ UnOrdered list of portfolio section ------------ */
+.portfolio .portfolio-list
+{
+    list-style: none;
+    /* border: 2px solid #0f0; */
+    text-align: center;
+    padding:20px;
+}
+/* ------------------------ listItem of UnOrdered list of portfolio section ------------------------- */
+.portfolio .portfolio-list  .portfolio-item
+{
+    /*  جنب بعض وعشان استطيع اعطاهم خصائص listItemعشان احط ال */
+    display: inline-block;
+    /* give width to each listItem */
+    width:80px;
+   /* border:2px solid #0ff; */
+    text-transform: capitalize;
+    padding:10px;
+    cursor: pointer; 
+}
+/* ---------------------- active listItem of UnOrdered list of portfolio section ----------------------- */
+/*  .active اللي وخده كلاس اسمه  listItemعلي ال style هيطبع هذا ال */
+.portfolio .portfolio-list  .portfolio-item.active
+{
+    background-color:#eb5424;
+    color:#fff;
+}
+/* -------------------------------------- portfolio images -------------------------------------- */
+.portfolio .boxImageContainer
+{
+    /* border: 3px solid #00f;  */
+    /* نفس طول المحتوي اللي موجود بداخله boxImageContainer عشان اخلي طول ال */
+    height:auto;
+    overflow: hidden;
+    /*  ياخذ طول العناصر اللي موجودة بداخله هعمل هذه الخاصية عشان اي حتجة زيادة يخفيها boxImageContainer عشان ال */
+}
+/* all dives inside the boxImage div */
+.boxImageContainer .portfolioBox1 , 
+.boxImageContainer .portfolioBox2 , 
+.boxImageContainer .portfolioBox3 , 
+.boxImageContainer .portfolioBox4 , 
+.boxImageContainer .portfolioBox5 , 
+.boxImageContainer .portfolioBox6 , 
+.boxImageContainer .portfolioBox7 , 
+.boxImageContainer .portfolioBox8 
+{
+    width: 25%;
+    float:left;
+    /* عشان ميكنش فيه مسافات بين الصور وبعضها */
+    font-size:0;
+    /*    للثامن ديف بحرية بالنسبة للاب overlay عشان احرك طبقة ال */
+    position: relative;
+	cursor: pointer;
+}
+/* each image inside the boxImage div */
+.boxImageContainer .portfolioBox1  img , 
+.boxImageContainer .portfolioBox2  img , 
+.boxImageContainer .portfolioBox3  img , 
+.boxImageContainer .portfolioBox4  img , 
+.boxImageContainer .portfolioBox5  img , 
+.boxImageContainer .portfolioBox6  img , 
+.boxImageContainer .portfolioBox7  img ,
+.boxImageContainer .portfolioBox8  img
+{
+    /* to take all width of its box */
+    width: 100%;
+/*    border:2px solid #00f; */
+}
+/* Overlay layer on each box of 8-Box */
+.boxImageContainer .portfolioBox1 .overlay , 
+.boxImageContainer .portfolioBox2 .overlay , 
+.boxImageContainer .portfolioBox3 .overlay , 
+.boxImageContainer .portfolioBox4 .overlay , 
+.boxImageContainer .portfolioBox5 .overlay , 
+.boxImageContainer .portfolioBox6 .overlay , 
+.boxImageContainer .portfolioBox7 .overlay ,
+.boxImageContainer .portfolioBox8 .overlay 
+{
+    font-size: 15px;
+    color:#fff;
+    /* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+    position: absolute;
+    /*   top left corner عشان يبدا من ال */
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(0,0,36,0.5);
+    /*  box of 8box علي اي  hover هخفي هذه الطبقة وهظهره لما اعمل */
+    opacity:0;
+	transition: 0.5s;
+}
+/* display Overlay layer on each box of 8-Box when hover  */
+.boxImageContainer .portfolioBox1:hover .overlay , 
+.boxImageContainer .portfolioBox2:hover .overlay , 
+.boxImageContainer .portfolioBox3:hover .overlay , 
+.boxImageContainer .portfolioBox4:hover .overlay , 
+.boxImageContainer .portfolioBox5:hover .overlay , 
+.boxImageContainer .portfolioBox6:hover .overlay , 
+.boxImageContainer .portfolioBox7:hover .overlay ,
+.boxImageContainer .portfolioBox8:hover .overlay 
+{
+    /*  box of 8box علي اي  hover هخفي هذه الطبقة وهظهره لما اعمل */
+    opacity:1;
+}
+/* span inside Overlay layer on each box of 8-Box  عشان احرك الكلام برحتي داخل الديف */
+.boxImageContainer .portfolioBox1 .overlay  button , 
+.boxImageContainer .portfolioBox2 .overlay  button , 
+.boxImageContainer .portfolioBox3 .overlay  button , 
+.boxImageContainer .portfolioBox4 .overlay  button , 
+.boxImageContainer .portfolioBox5 .overlay  button , 
+.boxImageContainer .portfolioBox6 .overlay  button , 
+.boxImageContainer .portfolioBox7 .overlay  button ,
+.boxImageContainer .portfolioBox8 .overlay  button
+{
+    position: absolute;
+    /* عشان يبدا من نصف الصفحة */
+    top:50%;
+    left:50%;
+    /* يكون في منتصف الصفحة  span بتاع ال  center عشان ال */
+    transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    background-color:transparent;
+    /*  button عشان اعرض اعطي خصائص لل */
+    display: block;
+    border:2px solid #eb5424; 
+    /* padding:top bottom left right */
+    padding: 10px 20px;
+    cursor:pointer;
+    outline:0;
+    color: #fff ;
+    font-size: 16px ;
+    text-transform: capitalize ;
+}
+
+/* <!-- ********************************** end: [ portfolio section ] ********************************** --> */
+/* ********************************* start: [ profile & skills section ] ***************************** */
+/* parent class */
+.profileAndSkills
+{
+    /* border: 2px solid #f00; */
+    width:100%;
+    height:auto;   
+    padding: 50px 0;
+    overflow: hidden;
+}
+/* profile and skills container عشان لا يبدا من بداية الصفحة */
+.profileAndSkills .profileAndSkillsContainer
+{
+    width:85%;
+    margin:50px auto;
+    /* border: 2px solid #080; */
+    overflow: hidden;      
+}
+
+/* ------------------------ first child :  profile part ------------------------ */
+.profileAndSkills .profileClass
+{
+    /* border: 2px solid #0f0; */
+    width:50%;
+    height: auto;
+    float:left;
+    /*  بتاع العنصر width من ضمن ال border or paddingمش هيحسب ال */
+    box-sizing: border-box;
+}
+.profileAndSkills .profileAndSkillsContainer .profile-list
+{
+    list-style:none;
+}
+.profileAndSkills .profileAndSkillsContainer .profile-list .profile-item
+{
+    margin-bottom:8px;
+}
+/* labels of list-item */
+.profileAndSkills .profileAndSkillsContainer .profileClass .profile-list .profile-item span
+{
+    /* هياخذ السطر كله  block عشان العناصر تظهر في نفس السطر عشان ال  */
+    display:inline-block;
+    width:100px;
+    /* border:2px solid #00f; */
+    font-weight: bold;
+    text-transform: capitalize;
+}
+/* span of www.company.com وطبق عليها الكلام ده wwwSpan هات السبام اللي وخده كلاس اسمه */
+.profileAndSkills .profileAndSkillsContainer .profileClass .profile-list .profile-item span.wwwSpan
+{
+    color:#eb5424;
+    font-weight: normal;
+    /* عشان ميخليش اول حرف كابيتل */
+    text-transform: none;
+    /* عشان ياخذ عرض المحتوي بتاعه فقط */
+    width: auto;
+}
+
+/* ------------------------- second child :  skills part ------------------------- */
+/* skills parent */
+.profileAndSkills .skillsClass
+{
+    /* border: 2px solid #00f; */
+    width:50%;
+    height: auto;
+    float:left;
+    /*  بتاع العنصر width من ضمن ال border or paddingمش هيحسب ال */
+    box-sizing: border-box;
+}
+/* skills paragraph */
+.profileAndSkills .skillsClass .skills-desc
+{
+    /* border:2px solid #0f0; */
+    font-size:15px;
+    margin-bottom:20px;
+    line-height:1.5;
+    color:#888;
+}
+
+/* -------------------- common style between  first & second child [profile , skills part] ----------------------- */
+/* header of first child  :  profile part */
+/* header of second child :  skills  part */
+.profileAndSkills .profileClass  .profileHeader ,
+.profileAndSkills .skillsClass   .skillsHeader
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:35px;
+    margin-bottom:30px;
+}
+/* header of first child  :  profile part */
+/* header of second child :  skills  part */
+.profileAndSkills .profileClass  .profileHeader span ,
+.profileAndSkills .skillsClass   .skillsHeader  span
+{
+    font-weight:normal;
+    color:#bbb;
+}
+/* -------------------------------------------------- progresBar part -------------------------------- */
+.profileAndSkills .skillsClass .bar
+{
+    /* background-color: #999; */
+    margin-bottom:10px; 
+    /* عشان يحس بالمحتوي اللي موجود بداخله وعشان العنصر اللي تحت ميطلعش فوق ويجي علي الشمال هعمل */
+    overflow: hidden;
+    padding:10px 0;
+}
+/* skills span[label] of progressBar */
+.profileAndSkills .skillsClass .bar .trackClass
+{
+    float: left;
+    text-transform: capitalize;
+    
+}
+/* percentage of progressBar */
+.profileAndSkills .skillsClass .bar .percentageClass
+{
+    float: right;
+    margin-right: 100px;
+}
+/* progress bar itself  */
+.profileAndSkills .skillsClass .bar .parentBarClass
+{
+    height: 2px;
+    background-color:#999;
+    /* عشان احرك الاسبام اللي بدا خلها بحرية وميخرجش بره الاب بتاعه */
+    position: relative;
+    top:5px;
+    padding:3px;
+}
+/* -------------------------------- span of progress bar itself -------------------------------- */
+/* common properities of three span of progressBar */
+.profileAndSkills .skillsClass .bar .parentBarClass span
+{
+    /* كوضع افتراضي  display:inline-block عشان ياخذ السطر كله وعشان اعرف اعطي له خصائص لان السبام واخد */
+    display: block;
+    /*  .parentBarClass عشان اخركه بحرية بالنسبة للاب بتاعه وهو ال */
+    position: absolute;
+    background-color:#eb5424; 
+    /* عشان ياخذ ارتفاع الاب اللي هوه موجود بداخله */
+    /*  بتاع الاب اللي هوه موجود فيه height يعني العنصر هياخذ كل ال height:100% يعني top: 0 , bottom:0  عشان يبدا من بداية الاب اللي هوه موجود فيه ومعني */
+    top: 0;
+    bottom: 0;
+    /*  بتاع الاب اللي هوه موجود فيه width يعني العنصر هياخذ كل ال width:100% يعني left: 0 , right:0  عشان يبدا من بداية الاب اللي هوه موجود فيه ومعني */
+    /* عشان يبدا من بداية العرض من ناحية الشمال */
+    left: 0;
+}
+/* first span of first progressBar */
+.profileAndSkills .skillsClass .bar .parentBarClass span.sp1
+{
+    /* 100% يكون متتلي علي اخره bar عشان ال */
+    width: 100%;
+}
+/* second span of second progressBar */
+.profileAndSkills .skillsClass .bar .parentBarClass span.sp2
+{
+    /* 100% يكون متتلي علي اخره bar عشان ال */
+    width: 90%;
+}
+/* third span of third progressBar */
+.profileAndSkills .skillsClass .bar .parentBarClass span.sp3
+{
+    /* 100% يكون متتلي علي اخره bar عشان ال */
+    width: 80%;
+}
+/* ********************************* end: [ profile & skills section ] ******************************* */
+
+/* ********************************* start: [ creative section ] ******************************* */
+.creative
+{
+    /* border: 2px solid #f00; */
+    width:100%;
+    height:auto;
+    background-image: url('../images/creative/client-say-bg.jpg');
+    background-size: cover;
+    /* عشان يظهر لي مركز الصورة من الطول والعرض */
+    background-position: center;
+    /* scroll عشان الصور تظل ثابته مهما عملت */
+    background-attachment: fixed;
+}
+.creative .creativeContainer
+{
+    /* border: 2px solid #0f0; */
+    width:85%;
+    height:auto;
+    /*  اللي بداخله  heightعشان يحس بالمحتوي اللي بداخله وياخذ ال */
+    overflow: hidden;
+}
+/* right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info
+{
+    width:50%;
+    float: right;
+    padding-top:35px;
+    /* border: 2px solid #00f; */
+}
+/* ---------------- common properities of h2 , h4 of creative section ------------------- */
+/* h2 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h2 , 
+/* h4 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h4
+{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size:50px;
+    margin-bottom:10px;
+}
+/* ---------------- common properities of span of h2 , h4 of creative section ------------------- */
+/* span of h2 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h2 .creativeSpanH2 , 
+/* span of h4 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h4 .creativeSpanH4
+{
+    font-weight: normal;
+    text-transform: capitalize;
+
+}
+/* span of h2 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h2 .creativeSpanH2 
+{
+    color:#bbb;
+} 
+/* span of h4 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h4 .creativeSpanH4 
+{
+    color:rgba(238,84,36,0.7);
+} 
+/* h4 of right part of creative section : creative info */
+.creative  .creativeContainer  .creative-info  .creative-h4
+{
+     color:#eb5424;
+}
+/* two paragraph of creative director */
+.creative  .creativeContainer  .creative-info .creative-desc1 ,
+.creative  .creativeContainer  .creative-info .creative-desc2
+{
+    color:#888;
+    margin-bottom:10px;
+    line-height:1.8;
+}
+/* two links of the two paragraph of creative director */
+.creative  .creativeContainer  .creative-info .creative-desc1  a ,
+.creative  .creativeContainer  .creative-info .creative-desc2 a
+{
+    /* يلغي الخط اللي تحت اللينك */
+    text-decoration: none;
+}
+/* ********************************* end:   [ creative section ] ************************************* */
+/* ********************************* start:   [ social media section ] ******************************* */
+.socialMedia-parent
+{
+    width:100%;
+    height:auto;
+    /* border: 2px solid #0f0; */
+    /*  عشان يحس بالابناء اللي بداخله overflow:hidden فالاب لازم ياخذ float:left طالما الابناء اللي داخل الاب لها الخاصية  */
+    overflow: hidden;   
+}
+/* common properities for 3 social media parts : for each div from 3 div --> width = 100 / 3 = 33.3% */
+.socialMedia-parent .social 
+{
+    width: 33.33%;
+    height: auto;
+    /* width من ضمن ال padding , border عشان ميحسبش ال */
+    box-sizing: border-box;
+    float: left;
+    /* padding : top right bottom left  */
+    padding: 100px 0 100px 60px;
+}
+/* common properities for paragraph of 3 social media parts  */
+.socialMedia-parent .social p
+{
+    text-transform: capitalize;
+    font-weight: bold;
+    color:#fff;
+}
+/* common properities for two span  of paragraph of 3 social media parts  */
+.socialMedia-parent .social p span
+{
+    /* يظهر في سطر لوحده span عشان كل */
+    display: block;
+    margin-bottom: 8px;
+}
+/* properities for the second span  of paragraph of the 3 icons div  */
+.socialMedia-parent .social p .info2
+{
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* -------- facebook div -------------- */
+.socialMedia-parent .social.facebookSocial
+{
+    /* border: 2px solid #00f; */
+    background-color:#3b5998;
+}
+/* -------- twitter div -------------- */
+.socialMedia-parent .social.twitterSocial
+{
+   /* border: 2px solid #0ff; */
+    background-color:#498cbf;
+}
+/* -------- pinterest div -------------- */
+.socialMedia-parent .social.pinterestSocial
+{
+    /* border: 2px solid #ff0; */
+    background-color:#cc2127;
+}
+/* common properities for 3 social media  icons parts  */
+.socialMedia-parent .social .iconClass
+{
+    /*  علي الشمال icon يجي بعد ال paragrpah عشان ال */
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    /* put the icon in the center of the horizontail axis */
+    text-align: center;
+    /*put the icon in the center of the horizontail axis  : to make this , the line-height must equal the height of icon*/
+    line-height:50px;
+    /* icon , paragraph  عشان يكون فيه مسافة بين ال */
+    margin-right: 10px;
+    /* color of three icons */
+    color:#888;
+}
+/* ********************************* end: [ social media section ] ******************************* */
+/* ********************************* start: [ drop  section ] ******************************* */
+/* drop parent */
+.drop
+{
+    width:100%;
+    height: auto;
+    text-align: center;
+    /* border:2px solid #000; */
+    /* padding : top right bottom left */
+    /* padding-top,bottom:50px ; padding-left,right:0px ; */
+    padding:50px  0 ;
+}
+/* drop container */
+.drop .dropContainer
+{
+    width:85%;
+    height: auto;
+    /* border:2px solid #00f; */
+    margin: 50px auto;
+    overflow: hidden;
+}
+/* drop title */
+.drop .dropContainer .drop-title
+{
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom:30px; 
+}
+/* drop title span */
+.drop .dropContainer .drop-title span
+{
+    font-weight: normal;
+    color:#ccc;
+}
+/* drop form */
+.drop .dropContainer  form
+{
+    /* width of form is 70% of the drop container width */
+    width: 70%;
+    /* to put the form in the center */
+    margin:auto;
+    /* background-color: #bbb; */
+}
+/* common properities for any input-field in the main form of drop section */
+.drop .dropContainer  form input 
+{
+     /* width  من ضمن ال  border , padding عشان ميحسبش ال */
+    box-sizing: border-box;
+    margin-bottom:10px;
+    padding: 5px;
+    /* to hide the outline when click on any input-field */
+    outline:0;
+}
+/* div inside drop form */
+.drop   .form .form-input
+{
+    overflow:hidden;
+}
+/* two input of div inside drop form */
+.drop .dropContainer  form .form-input input
+{
+/*هيكونوا هما المسافة بينهماtwo-fieldعرض بيساوي تسعة واربعين في المائة من عرض الديف اللي هما فيه وال2 في المائة الباقية من الtwo-input-fieldمن الinput-fieldهعطي كل*/
+    width: 49%;
+}
+/* name input-field */
+.drop .dropContainer  form .form-input input[type=text]
+{
+    float: left;
+}
+/* email input-field */
+.drop .dropContainer  form .form-input input[type=email]
+{
+    float: right;
+}
+/* subject input-field in the form */
+.drop .dropContainer  form  input.subjectField
+{
+    width: 100%;
+}
+/* textarea in the form */
+.drop .dropContainer  form  textarea
+{
+    width: 100%;
+    background-color: #eee;
+    /* to hide the outline when click on textarea */
+    outline:0;
+}
+/* button of  the form */
+.drop .dropContainer  form  input[type=submit]
+{
+    /* width=60% from the width of the main form */
+    width: 60%;
+    background-color: #fff;
+    color:#888;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+/* ********************************* end: [ drop  section ] ********************************** */
+
+/* ********************************* start:  footer [copyright]  section  ********************************** */
+.footerClass
+{
+    text-align: center;
+    /* Padding-top , bottom : 10px ;  Padding-left , right:0px */
+    padding: 10px 0;
+}
+.footerClass p
+{
+    color:#888;
+    /* افتراضي فهلغيه  margin بيكون واخد paragraph ال */
+    margin: 0;
+}
+/* ********************************* end: footer [copyright]  section ********************************** */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media Query @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+
+// Extra small devices[ portrait phones , less than 576px ]
+@media (max-width:575px)  { }
+// Small devices [ landscape phones , less than 768px ]
+@media (max-width:767px)  { }
+// Medium devices [ tablets , less than 992px ]
+@media (max-width:991px)  { }
+// large devices [ desktops , less than 1200px ]
+@media (max-width:1199px) { }
+
+*/
+/* -------------------------------------- media Query style for navbar -------------------------------------- */
+/* ////////////////////// media query for Extra small , small  and medium screen //////////////////////// */
+/* //////////////////////////////////// media query of navbar section ////////////////////////////////////////// */
+/* hide the navbar menu button in large screen */
+@media (min-width:1147px)
+{
+    .navbar label { display: none; }
+}
+@media (max-width : 1147px)
+{
+    /* navbar logo */
+    .navbar .container .logo
+    {
+        width: 100%;
+        /* remove float effect */
+        float: none;
+    }
+    /* div of links */
+    .navbar .container .links 
+    {
+        width:100%;
+        float: none;
+        font-size:21px;
+        margin-top:20px;
+        /* هخفيها وهتظهر لما اضغط علي الايقونة */
+        display: none;
+    }
+    /*  list items of navbar links   <li> */
+    .navbar .links .ul-list .list-item
+    {
+        display: block;
+        text-align: center;
+    }
+     /*  list items of navbar links   <li> <a> hover  */
+    .navbar .links .ul-list .list-item a:hover
+    {
+        background-color:#222;
+        color:#fff;
+    }
+       
+}
+/* ////////////////////////////////////// media query of home section ////////////////////////////////////////// */
+@media (max-width:809px)
+{
+    /* ------------------ decrease font-size of home section content ------------------ */
+    
+    /* decrease font-size of home h2 */
+    .homeClass .homeContainer .home-information  .home-title
+    {
+        margin-top:80px;
+        font-size:35px; 
+        color:#000;
+    }
+    /* decrease font-size of home h4 */
+    .homeClass .homeContainer .home-information  .home-info
+    {
+        font-size:25px;
+    }   
+    /* decrease font-size of home p */
+    .homeClass .homeContainer .home-information  .home-desc
+    {
+        font-size:13px;
+    }   
+    /* decrease font-size of home button */
+    .homeClass .homeContainer .home-information  .home-btn
+    {
+        padding:10px;
+        margin-bottom:10px;
+    }
+}
+/* ////////////////////////////////////// media query of my work section ////////////////////////////////////////// */
+@media (min-width:0px) and (max-width:593px)
+{
+    
+    .myWorkParent .myWork1 , 
+    .myWorkParent .myWork2 , 
+    .myWorkParent .myWork3 
+    {
+        width:100%;
+        float: none;
+        margin-left:0;
+        margin-bottom: 5%;
+    }
+   
+}
+@media (min-width:594px) and (max-width:918px)
+{
+    .myWorkParent .myWork1 , 
+    .myWorkParent .myWork2 , 
+    .myWorkParent .myWork3
+    {
+        width:47%;
+    }
+    .myWorkParent .myWork3
+    {
+         margin-left: 0;
+    }
+}
+/* ////////////////////////////////////// media query of portfolio section ////////////////////////////////////////// */
+@media (min-width:0px) and (max-width:582px)
+{
+    .boxImageContainer .portfolioBox1 , 
+    .boxImageContainer .portfolioBox2 , 
+    .boxImageContainer .portfolioBox3 , 
+    .boxImageContainer .portfolioBox4 , 
+    .boxImageContainer .portfolioBox5 , 
+    .boxImageContainer .portfolioBox6 , 
+    .boxImageContainer .portfolioBox7 , 
+    .boxImageContainer .portfolioBox8 
+    {
+        /* كل صورة هتاخذ كل العرض اللي هيه موجودة فيه */
+        width:100%;
+    }
+    /* هخلي كل لينك يظهر في سطر لوحده */
+    .portfolio .portfolio-list  .portfolio-item
+    {
+        /* كل صورة هتاخذ كل الصف اللي هيه موجودة فيه */
+        display: block;
+/* text-align:center مش margin: auto; فعشان اخليه في المنتصف هستخدم display: block; عشان يظهروا في منتصف الشاشة من ناحية العرض طالما العنصر واخد*/
+        margin: auto;
+    }
+}
+    
+@media (min-width:583px) and (max-width:768px)
+{
+    .boxImageContainer .portfolioBox1 , 
+    .boxImageContainer .portfolioBox2 , 
+    .boxImageContainer .portfolioBox3 , 
+    .boxImageContainer .portfolioBox4 , 
+    .boxImageContainer .portfolioBox5 , 
+    .boxImageContainer .portfolioBox6 , 
+    .boxImageContainer .portfolioBox7 , 
+    .boxImageContainer .portfolioBox8 
+    {
+        width:50%;
+    }
+}
+/* ********************************* media query: [ profile & skills section ] ***************************** */
+@media (min-width:0px) and (max-width:820px)
+{
+    .profileAndSkills .profileClass 
+    {
+        margin-bottom:20px;
+    }
+    .profileAndSkills .profileClass   ,
+    .profileAndSkills .skillsClass  
+    {
+        width:100%;
+        float: none;
+    }
+  
+}
+/* ********************************* media query of : [ creative section ] ******************************* */
+@media (min-width:0px) and (max-width:991px)
+{
+    /* ------------- big parent of creative section -------------*/
+    .creative 
+    {
+        /*  اللي بداخله  contentهيكون الارتفاع بتاعه حسب ال */
+        height: auto;
+    }
+    /* ----------- right part of creative section : creative info ----------- */
+    .creative  .creativeContainer  .creative-info
+    {
+        width: 100%;
+        /* float  هلغي ال */
+        float: none;
+    }
+    /* ---------------- common properities of h4 , h2  of creative section ------------------- */
+    .creative  .creativeContainer  .creative-info  .creative-h2 ,
+    .creative  .creativeContainer  .creative-info  .creative-h4
+    {
+        font-size:35px;
+    }
+    
+    /* ---------------- common properities of two paragraph  of creative section ------------------- */
+    .creative  .creativeContainer  .creative-info  .creative-desc1 ,
+    .creative  .creativeContainer  .creative-info  .creative-desc2
+    {
+        color:#000;
+    }   
+}
+/* ********************************* media query : social media section ******************************* */
+@media (min-width:0px) and (max-width:991px)
+{
+    .socialMedia-parent .social
+    {
+        /* make each div of three div take the full width[full row] */
+        width:100%;
+        float: none;
+    }
+}
+/* *********************************media query of drop  section ******************************* */
+@media (min-width:0px) and (max-width:585px)
+{
+    /* drop title */
+    .drop .dropContainer .drop-title
+    {
+        font-size: 40px;
+    }
+    /* common properities for any input-field in the main form of drop section */
+    .drop .dropContainer  form .form-input  input
+    {
+        width:100%;
+    }
+    /* main form */
+    .drop .dropContainer  form 
+    {
+        width:100%;
+    }

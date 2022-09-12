@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>navbar section</title>
+<style>
+/*  after , before عشان ميكنش فيه فارغات في العرض وطول الصفحة لكل العناصر ولو فيه عناصر */
+	
+* 		 ,
+*:before ,
+*:after
+{
+    padding: 0;
+    margin: 0;
+}
+.navbarClass
+{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid #f00; */
+    background-color: #ccc;
+    position: relative;
+    /* padding : top right bottom left */
+    padding:15px 0;
+}
+.navbarClass .navbarContainer
+{
+    width: 85%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.navbarClass .navbarContainer  .logo
+{
+    float: left;
+    width: 50%;
+    /* border: 2px solid #0f0; */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size:30px;
+    text-transform: capitalize;
+}
+.navbarClass .navbarContainer  .links
+{
+    float: left;
+    width: 50%;
+   /*  border: 2px solid #0f0; */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.navbarClass .navbarContainer  .links .navbar-list
+{
+    list-style: none;
+}
+.navbarClass .navbarContainer  .links .navbar-list  .navbar-item
+{
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size:20px;
+    cursor: pointer;
+}
+.navbarClass .navbarContainer .links .navbar-list .navbar-item a
+{
+    display: block;
+   /* border: 2px solid #0f0; */
+    text-decoration: none;
+    color: #000;
+    /* padding:top right bottom left  */
+    padding: 10px 10px; 
+}
+.navbarClass .navbarContainer  .links .navbar-list  a.active
+{
+    color: #eb5424;
+}            
+/* checkbox and label of navbar menu */
+.navbarClass .navbarContainer  .navInputClass ,
+.navbarClass .navbarContainer  label
+{
+    position: absolute;
+    top: 23px;
+    right:25px;   
+}
+.navbarClass .navbarContainer  .navInputClass 
+{
+    display: none;
+}
+.navbarClass .navbarContainer  label
+{
+    display: block;
+    width:30px;
+    height: 30px;
+    padding: 20px;
+    background-size: cover;
+    background-image: url('../images/navbar_icon/open.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*  من كل العناصر الللي معاه في نفس الاب وينفذ عليهم الاتي هيخلي كل عنصر يظهر في سطر لوحده  listItem هيجيب لي ال checkbox لما هضغط علي ال */
+.navbarClass .navbarContainer  input:checked ~ .links .navbar-list
+{
+    display: block;
+}
+/* close بايقونة ال open لما اضغط علي الايقونة اول مرة هيستبدل ايقونة ال */
+.navbarClass .navbarContainer  input:checked ~ label
+{
+    background-image: url('../images/navbar_icon/close.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media query @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media (min-width:1191px)
+{
+    /* هخفي الايقونة في الشاشات الكبيرة */
+    .navbarClass .navbarContainer  .navInputClass , .navbarClass .navbarContainer  label
+    {
+        display: none;
+    }
+}
+@media (min-width:0px) and (max-width:1190px)
+{
+    .navbarClass .navbarContainer  .logo
+    {
+        width: 100%;
+        float: none;
+        /* border:2px solid #0f0; */
+    }
+    .navbarClass .navbarContainer  .links
+    {  
+        width:100%;
+        float: none;
+    }
+    .navbarClass .navbarContainer  .links .navbar-list
+    { 
+        font-size:21px;
+        margin-top:20px;
+        /* هخفيها وهتظهر لما اضغط علي الايقونة */
+        display: none;
+        /* border:2px solid #0f0;*/ 
+    }
+    .navbarClass .navbarContainer  .links .navbar-list  .navbar-item
+    {
+        /* تاخذ الصف كله وعشان مفيش عنصر يجي جنبها في نفس الصف  <li> عشان كل */
+        display: block;
+        /* عشان اللينكات تيجي في المنتصف */
+        text-align: center;
+    }
+     .navbarClass .navbarContainer  .links .navbar-list  .navbar-item a:hover
+    {
+        background-color: #000;
+        color:#fff;
+    }
+}
+</style>
+</head>
+<body>
+	<div class="navbarClass">
+		<div class="navbarContainer">
+
+			<div class="logo">
+				<h2>ultra profile</h2>
+			</div>
+
+			<input type="checkbox" class="navInputClass" id="navInputId">
+			<label for="navInputId"></label>
+
+			<div class="links">
+				<ul class="navbar-list">
+					<li class="navbar-item"><a href="#" class="active">home</a></li>
+					<li class="navbar-item"><a href="#">work</a></li>
+					<li class="navbar-item"><a href="#">portfolio</a></li>
+					<li class="navbar-item"><a href="#">resume</a></li>
+					<li class="navbar-item"><a href="#">about</a></li>
+					<li class="navbar-item"><a href="#">contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>my work section</title>
+        <!-- font-awesome عشان الايقونات اللي هستخدمها من مكتبة ال -->
+        <link rel="stylesheet"href="../css/vendors/font-awesome.min.css">
+        <style>
+            * , *:after , *:before
+            {
+                margin: 0;
+                padding: 0;
+            }
+            .myWorkSection
+            {
+                width:100%;
+                height: auto;
+                /* border: 2px solid #f00; */
+            }
+            .myWorkSection .myWorkContainer
+            {
+                width:85%;
+                height:auto;
+                margin: 50px auto;
+                /* border: 2px solid #0f0; */
+            }
+            .myWorkSection .myWorkContainer .myWorkH2
+            {
+                font-size:60px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .myWorkSection .myWorkContainer .myWorkH2 .myWorkSpan
+            {
+                color:#999;
+            }
+            /* properities of part of three cart */ 
+            .myWorkSection .myWorkContainer  .threeCartWork
+            {
+                /* border: 2px solid #00f; */
+                width: 100%;
+                height:auto;
+            }
+            /* common properities for three cart */
+            .myWorkSection .myWorkContainer  .threeCartWork .cart
+            {
+                float: left;
+                width:30%;
+                height: auto;
+                border:2px solid #000;
+                box-sizing: border-box;
+                text-align: center;
+                margin-left:5%;
+                margin-top:20px;
+                padding:100px 0px;
+            }
+            /* line under the three header of three cart */
+            .myWorkSection .myWorkContainer  .threeCartWork .cart  hr
+            {
+                width:60%;
+                margin: auto;
+                /* make space under the line */
+                margin-bottom:20px;
+            }
+            /* firt cart : mobile ux */
+            .myWorkSection .myWorkContainer  .threeCartWork .mobileUx
+            {
+                /*  cart بتاع اول margin-left هلغي ال */
+                margin-left:0;  
+            }
+            /* common properities for h2 of the three cart */
+            .myWorkSection .myWorkContainer  .threeCartWork .cart .cartH2
+            {
+                font-size:25px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color:#eb5424;
+                margin-bottom:20px;
+            }
+            .myWorkSection .myWorkContainer  .threeCartWork .cart .cartPara
+            {
+                color:#888;
+                font-size:15px;
+                padding: 15px;
+            }
+            /* common properities for three icons */
+            .myWorkSection .myWorkContainer  .threeCartWork  .iconClass
+            {
+                margin-bottom:20px;
+                color:#999;
+            }
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ media Query @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  */
+            @media (min-width:0px) and (max-width:611px)
+            {
+                /* common properities for three cart */
+                .myWorkSection .myWorkContainer  .threeCartWork .cart
+                {
+                    width: 100%;
+                    float: none;
+                    /* مفيش مسافة من ناحية الشمال لكل كارت من الثلاثة كروت */
+                    margin-left: 0;
+                    /* مسافة اسفل كل كارت من الثلاثة كروت */
+                    margin-bottom:5px;
+                }
+            }
+            @media (min-width:612px) and (max-width:947px)
+            {
+                 /* common properities for three cart */
+                .myWorkSection .myWorkContainer  .threeCartWork .cart
+                {
+                    width:47%;    
+                }
+                 /* third cart : html template هلغي المسافة اللي في ناحية الشمال للكارت الثااث  */
+                .myWorkSection .myWorkContainer  .threeCartWork .htmlTemp
+                {
+                    margin-left: 0;
+                }
+               
+            }
+        </style>
+    </head>
+    <body>
+        <div class="myWorkSection">
+            <div class="myWorkContainer">
+                <h2 class="myWorkH2"><span class="myWorkSpan">my</span> work</h2>
+                <div class="threeCartWork">
+                    <div class="cart mobileUx">
+                        <i class="iconClass fa fa-chain fa-3x"></i>
+                        <h2 class="cartH2">mobile ux </h2>
+                        <hr>
+                        <p class="cartPara">
+                            I am a professional ux designer and front end developer creating and designs for mobile many and responsive.
+                        </p>
+                    </div>
+                    <div class="cart webDesign">
+                        <i class="iconClass fa fa-bolt fa-3x"></i>
+                        <h2 class="cartH2">web design</h2>
+                        <hr>
+                        <p class="cartPara">
+                            I am a professional ux designer and front end developer creating and designs for mobile many and responsive.
+                        </p>
+                    </div><div class="cart htmlTemp">
+                        <i class="iconClass  fa fa-tachometer  fa-3x"></i>
+                        <h2 class="cartH2">html templates </h2>
+                        <hr>
+                        <p class="cartPara">
+                            I am a professional ux designer and front end developer creating and designs for mobile many and responsive.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

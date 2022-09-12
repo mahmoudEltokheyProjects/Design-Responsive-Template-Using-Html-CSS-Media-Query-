@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Design Html , Css , Media Query</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- css ال folder داخل  fontsال folder فلازم احط  vendors folder داخل ال font-awesome.min.css طالما هحط ال -->
+        <link rel="stylesheet"href="css/vendors/font-awesome.min.css">
+        <link rel="stylesheet"href="css/style.css">
+    </head>
+    <body>
+        <!-- ************************************** start :  navbar of website ******************************** -->
+        <div class="navbar">
+            <div class="container">
+                <!-- navbar Logo  -->
+                 <div class="logo">
+                    <h2 class="logo-text">ultra profile</h2>
+                </div>
+                
+                <!-- navbar menu button   -->
+                <input type="checkbox"id="nav">
+<!--check هيعملlabel or checkboxسواء ضغط علي ال checkboxبتاع ال id نقس قيمة الlabelبتاع الforفهخلي قيمة ال checkbox بال labelعشان اربط ال -->
+                <label for="nav"></label>
+                <!-- navbar links   -->
+                <div class="links">
+                    <ul class="ul-list">
+                        <li class="list-item"><a href="index.html"class="active">home</a></li>
+                        <li class="list-item"><a href="#">work</a></li>
+                        <li class="list-item"><a href="#">portfolio</a></li>
+                        <li class="list-item"><a href="#">resume</a></li>
+                        <li class="list-item"><a href="#">about</a></li>
+                        <li class="list-item"><a href="#">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ************************************** end :  navbar of website ************************************* -->
+        <!-- ****************** start:[ home section ] JOHN WHITE and creative director ************************** --> 
+        <div class="homeClass">
+            <!-- عشان مخليش المحتوي يبدا من بداية الصفحة containerبستخدم ال -->
+            <div class="homeContainer">
+                <!-- to put these elements in the center of home section [ hero image idea ] -->
+                <div class="home-information">
+                    <h2 class="home-title">john white</h2>
+                    <h4 class="home-info">creative director</h4>
+                    <p class="home-desc">
+                        I am a professional <span>ux designer</span> and <span>front-end developer</span> creating modem and responsive designs for <span>web</span> and <span>mobile</span> let us work together.thank you
+                    </p>
+                    <button class="home-btn">lets's begin</button>
+                 </div>
+            </div>
+        </div>
+        <!-- ****************** end:[ home section ] JOHN WHITE and creative director ************************** --> 
+
+        <!-- ********************************** start: [ work section ] **************************************** -->
+        <div class="myWorkParent">
+            <!-- container of myWork section -->
+            <div class="containerMyWork">
+                <h2 class="myWorkTitle"><span>my</span> work</h2>
+                <!--  first div  -->
+                <div class="myWork1">
+                    <!-- myWork1 icon -->
+                    <!-- give class name for the icon  className='icon1Class' -->
+                    <i class="icon1Class fa fa-chain fa-3x"></i>
+                    <!-- myWork1 heading -->
+                    <h4 class="myWork1Head">mobile ux</h4>
+                    <!-- make line under the header of first div -->
+                    <hr class="line">
+                    <!-- myWork1 paragraph -->
+                    <p class="myWorkPara1"> 
+                        I am a professional ux designer and front end developer creating and designs for mobile  many and responsive.
+                    </p>
+                </div>
+                <!--  second div  -->
+                <div class="myWork2">
+                    <!-- myWork2 icon -->
+                    <i class="icon2Class fa fa-bolt fa-3x"></i>
+                    <!-- myWork2 heading -->
+                    <h4 class="myWork2Head">web design</h4>
+                    <!-- make line under the header of second div -->
+                    <hr class="line">
+                    <!-- myWork2 paragraph -->
+                    <p class="myWorkPara2"> 
+                        I am a professional ux designer and front end developer creating and designs for mobile  many and responsive.
+                    </p>
+                </div>
+                <!--  third div  -->
+                <div class="myWork3">
+                    <!-- myWork2 icon -->
+                    <i class="icon3Class fa fa-tachometer fa-3x"></i>
+                    <h4 class="myWork3Head">html templates</h4>
+                    <!-- make line under the header of third div -->
+                    <hr class="line">
+                    <p class="myWorkPara3"> 
+                        I am a professional ux designer and front end developer creating and designs for mobile  many and responsive.
+                </div>
+            </div>
+        </div>  
+        <!-- ********************************** end : [ work section ] **************************************** -->
+        <div class="clearFloat"></div>
+        <!-- ********************************** start: [ portfolio section ] ********************************** --> 
+        <div class="portfolio">
+            <h2 class="portfolio-title"><span>my</span> portfolio</h2>
+            <ul class="portfolio-list">
+                <li class="portfolio-item  active">all</li>
+                <li class="portfolio-item">html</li>
+                <li class="portfolio-item">photoshop</li>
+                <li class="portfolio-item">wordpress</li>
+                <li class="portfolio-item">mobile</li>
+            </ul>
+            <div class="boxImageContainer">
+                <!--  هيظهر طبقة مكتوب عليها شويت كلام hover عشان لما هعمل div هحط كل صورة في -->
+                <div class="portfolioBox1">
+                    <img src="images/portfolio/portfolio-img1.jpg" alt="image1">
+                    <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox2">
+                    <img src="images/portfolio/portfolio-img2.jpg" alt="image2">
+                     <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox3">
+                    <img src="images/portfolio/portfolio-img3.jpg" alt="image3">
+                     <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox4">
+                    <img src="images/portfolio/portfolio-img4.jpg" alt="image4">
+                     <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox5">
+                    <img src="images/portfolio/portfolio-img5.jpg" alt="image5">
+                     <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox6">
+                    <img src="images/portfolio/portfolio-img6.jpg" alt="image6">  
+                     <p class="overlay"> 
+                       <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox7">
+                    <img src="images/portfolio/portfolio-img7.jpg" alt="image7">
+                     <p class="overlay"> 
+                        <button>show details</button>
+                    </p>
+                </div>
+                <div class="portfolioBox8">                
+                    <img src="images/portfolio/portfolio-img8.jpg" alt="image8">
+                     <p class="overlay"> 
+                       <button>show details</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ********************************** end: [ portfolio section ] ********************************** --> 
+        <div class="clearFloat"></div>
+        <!-- ********************************** start: [ profile & skills section ] ****************************** --> 
+        <div class="profileAndSkills">
+            <div class="profileAndSkillsContainer">
+                <!-- profile part -->
+                <div class="profileClass">
+                    <h2 class="profileHeader"><span>my</span> profile</h2>
+                    <ul class="profile-list">
+                        <li class="profile-item">
+                            <span>name</span>john white
+                        </li> 
+                        <li class="profile-item">
+                            <span>birthday</span>december 24 1996
+                        </li> 
+                        <li class="profile-item">
+                            <span>address</span>shubra elkhema 3000 egypt
+                        <li class="profile-item">
+                            <span>phone</span>+001274792335 | 009 080 0760
+                        </li> 
+                        <li class="profile-item">
+                            <span>email</span>mahmoud@gmail.com
+                        </li> 
+                        <li class="profile-item">
+                            <span class="websiteSpan">website</span>
+                            <span class="wwwSpan">www.company.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- skills part -->
+                <div class="skillsClass">
+                    <h2 class="skillsHeader">some<span> skills</span></h2>
+                    <p class="skills-desc">
+                        I am a professional ux designer and front end developer creating and designs for mobile  many and responsive.creating and games and documents designs for mobile many and responsive.
+                    </p>
+                    <!-- /////////////// progress bar ///////////////////  -->
+                    
+                    <!-- ////////////////first progressBar//////////////// -->
+                    <!-- the parent of bar -->
+                    <div class="bar">
+                        <span class="trackClass">bootstrap</span>
+                        <!--  &#37; ==> % : the percentage -->
+                        <span class="percentageClass">100&#37; </span>
+                        
+                        <!-- بتاع العناصر اللي فوقه  float عشان يلغي تاثير ال -->
+                        <div class="clearFloat"></div>
+                        
+                        <div class="parentBarClass">
+                            <span class="sp1"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- //////////////// second progressBar /////////////////// -->
+                    <!-- the parent of bar -->
+                    <div class="bar">
+                        <span class="trackClass">css3</span>
+                        <!--  &#37; ==> %  the percentage -->
+                        <span class="percentageClass">90&#37; </span>
+                        
+                         <!-- بتاع العناصر اللي فوقه  float عشان يلغي تاثير ال -->
+                        <div class="clearFloat"></div>
+                        
+                        <!-- sub-parent : the progress bar itself -->
+                        <div class="parentBarClass">
+                            <span class="sp2"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- ////////////////third progressBar//////////////// -->
+                    <!-- the parent of bar -->
+                    <div class="bar">
+                        <span class="trackClass">photoshop</span>
+                        <!--  &#37; ==> %  the percentage -->
+                        <span class="percentageClass">80&#37; </span>
+                        
+                         <!-- بتاع العناصر اللي فوقه  float عشان يلغي تاثير ال -->
+                        <div class="clearFloat"></div>
+                        
+                        <!-- the progress bar itself -->
+                        <div class="parentBarClass">
+                            <span class="sp3"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- ********************************** end: [ profile & skills section ]  ********************************** --> 
+        
+        <!-- ********************************** start: [ creative section ]  ********************************** --> 
+        <div class="creative">
+            <div class="creativeContainer">
+                <!-- second part : creative info  -->
+                <div class="creative-info">
+                    <h2 class="creative-h2"><span class="creativeSpanH2">This is</span> Me</h2>
+                    <h4 class="creative-h4"><span class="creativeSpanH4">creative</span> director</h4>
+                    <p class="creative-desc1">
+                         I am a professional ux designer <a href="www.facebook.com">facebook</a> and front end developer  and designs for mobile  many and responsive.creating and games and documents designs for mobile many and responsive.
+                    </p>
+                    <p class="creative-desc2">
+                         I am a professional ux designer and  <a href="www.twitter.com">twitter</a> front end creating and designs for mobile  many and responsive.creating and games and documents designs for mobile many and responsive.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ********************************** end  : [ creative section ]  ********************************** --> 
+        <!-- ********************************* start:   [ social media section ] ****************************** -->
+        <div class="socialMedia-parent">
+<!-- first part : facebook part :  has two classs name,firstName=social:for common properities,second=facebookSocial  -->
+            <div class="social facebookSocial">
+    <!--  خلي بالك ممكن العنصر يكون ليه اكثر من اسم كلاس className='iconClass' خاص بها style هعطي الايقون اسم كلاس اضافي عشان اعرف اعطي الايقون -->
+                <i class="iconClass fa fa-facebook fa-lg"></i>
+                <p>
+                    <span class="info1">follow me on</span>
+                    <span class="info2">social facebook</span>
+                </p>
+            </div>
+<!-- second part : twitter part : has two classs name,firstName=social:for common properities,second=twitterSocial  -->
+             <div class="social twitterSocial">
+                <i class="iconClass fa fa-twitter fa-lg"></i>
+                <p>
+                    <span class="info1">tweet me on</span>
+                    <span class="info2">social twitter</span>
+                </p>
+            </div>
+<!-- third part : pinterest part : has two classs name,firstName=social:for common properities,second=pinterestSocial  -->
+            <div class="social pinterestSocial">
+                <i class="iconClass fa fa-pinterest fa-lg"></i>
+                <p>
+                    <span class="info1">pin me on</span>
+                    <span class="info2 ">social pinterest</span>
+                </p>
+            </div>
+            
+        </div>
+        <!-- ********************************* end:   [ social media section ] ****************************** -->
+        <div class="clearFloat"></div>
+        <!-- ********************************* start: [ drop  section ] ************************************* -->
+        <div class="drop">
+            <div class="dropContainer">
+                <!-- header of drop section -->
+                <h2 class="drop-title"><span>drop</span> me a line</h2>
+                <form action="">
+                <!--two input-field in the same row اللي هيظهروا في نفس الصف الاول علي الشمال والثاني علي اليمين two inputField هعمل ديف وهحط  -->
+                    <div class="form-input">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email"  placeholder="Your Email">
+                    </div>
+                    <input type="text" class="subjectField" placeholder="Your Subject">
+                    <textarea  cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+        <!-- ********************************* end: [ drop  section ] ************************************** -->
+        <!-- ********************************* start:  footer [copyright]  section  ************************ -->
+        <div class="footerClass">
+            <p>Copyright &copy; 2020 Ultra Profile.Design by TemplateMo</p>
+        </div>
+        <!-- ********************************* end:  footer [copyright]  section  *//*********************** -->
+
+        <script src="js/jquery.min.js"></script> 
+        <script src="js/scriptFile.js"></script>
+    </body>
+</html> 
